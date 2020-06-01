@@ -1,0 +1,63 @@
+Players
+-
+player_id int pk
+player_name varchar
+
+Maps
+-
+map varchar pk
+
+Teams
+-
+team varchar
+player_id int fk - Players
+from_date date
+to_date date
+
+Matches
+-
+match_id long pk 
+event_id int fk - Events
+team_1 varchar fk - Teams
+team_2 varchar fk - Teams
+best_of int
+map_1 varchar
+map_2 varchar
+map_3 varchar
+date date
+
+Player_results
+-
+match_id long fk - Matches
+player_id int fk - Players
+map varchar fk - Maps
+kills int
+assists int
+deaths int
+hs int
+flash_assists int
+kast float
+kddiff int
+adr float
+fkdiff int
+rating float
+
+Team_results
+-
+match_id long fk - Matches
+team varchar fk - Teams
+map varchar fk - Maps
+rank int
+equipment_avg int
+starting_ct varchar
+rounds_total int
+rounds_won int
+rounds_won_ct int
+rounds_won_t  int
+map_winner varchar
+match_winner varchar
+
+Events
+-
+event_id int pk 
+event_name varchar
