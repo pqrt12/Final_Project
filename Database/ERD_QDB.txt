@@ -18,12 +18,14 @@ Matches
 -
 match_id long pk 
 event_id int fk - Events
-team_1 varchar fk - Teams
-team_2 varchar fk - Teams
+team_1 varchar
+team_2 varchar
 best_of int
 map_1 varchar
 map_2 varchar
 map_3 varchar
+map_4 varchar
+map_5 varchar
 date date
 
 Player_results
@@ -45,7 +47,7 @@ rating float
 Team_results
 -
 match_id long fk - Matches
-team varchar fk - Teams
+team varchar
 map varchar fk - Maps
 rank int
 equipment_avg int
