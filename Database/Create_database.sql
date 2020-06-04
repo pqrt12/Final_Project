@@ -1,12 +1,16 @@
 ﻿CREATE TABLE "Players" (
     "player_id" int   NOT NULL,
     "player_name" varchar   NOT NULL,
-    CONSTRAINT "pk_Players" PRIMARY KEY ("player_id")
+    CONSTRAINT "pk_Players" PRIMARY KEY (
+        "player_id"
+     )
 );
 
 CREATE TABLE "Maps" (
     "map" varchar   NOT NULL,
-    CONSTRAINT "pk_Maps" PRIMARY KEY ("map")
+    CONSTRAINT "pk_Maps" PRIMARY KEY (
+        "map"
+     )
 );
 
 CREATE TABLE "Teams" (
@@ -19,7 +23,9 @@ CREATE TABLE "Teams" (
 CREATE TABLE "Events" (
     "event_id" int   NOT NULL,
     "event_name" varchar   NOT NULL,
-    CONSTRAINT "pk_Events" PRIMARY KEY ("event_id")
+    CONSTRAINT "pk_Events" PRIMARY KEY (
+        "event_id"
+     )
 );
 
 CREATE TABLE "Matches" (
@@ -31,8 +37,12 @@ CREATE TABLE "Matches" (
     "map_1" varchar   NOT NULL,
     "map_2" varchar   NOT NULL,
     "map_3" varchar   NOT NULL,
+	"map_4" varchar   NOT NULL,
+	"map_5" varchar   NOT NULL,
     "date" date   NOT NULL,
-    CONSTRAINT "pk_Matches" PRIMARY KEY ("match_id")
+    CONSTRAINT "pk_Matches" PRIMARY KEY (
+        "match_id"
+     )
 );
 
 CREATE TABLE "Player_results" (
