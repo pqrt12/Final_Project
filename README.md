@@ -1,6 +1,7 @@
 # Summary
 
 The topic that we selected in our project is Counter Strike Go, for the reason that Electronic Sports has been an exponentially growing industry with a huge fan base. We got our source code from Kaggle which provided us Economic, picks, players, and results data of some of the most competitive players. With all of this data we hope to predict the team winner per each match which will depend on the historical data of how each team has performed in the past. 
+
 ## Google Slides Presentation
 Presentation: https://docs.google.com/presentation/d/1OPEzzJzlDzMRvM-uqb8Qik-JQ0gtG_k7-CF_eRgbaU4/edit?usp=sharing
 
