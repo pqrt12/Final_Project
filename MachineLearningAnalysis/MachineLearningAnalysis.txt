@@ -1,0 +1,30 @@
+The hope for our model is to be able to provide the probibility for a given team to win against another team on all 8 competitive maps. If
+there was more time, I would spend that gathering more data on the various professional players being used in the model. This could 
+be acheived by scraping their indivudual performances in unofficial matches through ESEA, Faceit, or cevo. These three services are
+independently owned companies that provied their very own game servers. I also would attempt to scrape all large demo files through HLTV.org
+to obtained even more detailed events about these players on the matches we currently have for processing. These features would allow me to 
+create a strong player or elo rating that I believe would have a high impact on our models performance. Features such as shots per round, 
+damage per round, etc. On top of these added features it would provide coordinates that I could use(I will be doing this for a few maps/ 
+teams) to create heatmaps of hotzones(areas for higher kills or higher deaths or positions that have an overall advantage in a team or 
+player being succesful). In regards to the data I have currrently, I would like to further explore the pct_change of some features that 
+could possibly carry a higher weight for the models performance. One that I was exploring was the pct_change from the teams rating to the 
+cumulative rating per map(this is based on each individual players cumulative rating then averaged for the team). From my exploritory 
+analysis on this I was able to see that the winning team of the map had the higher percentage change from both cumulative avg per map and 
+cumulative average overall. I will also be re-egineering my features to provide better support to the model through statistical 
+analysis(still pondering what and how I want to shape them).
+
+We are using a logistic regression algorithm in models such as sklearn.linear_model.LogisticRegression and SVR models. They both rely 
+heavily on feature egineering and take in a target that has one of two outcomes(win or lose). A common problem is Overfitting, which entails
+that the given features in the model are ttraining the data too well and the model is easily able to ideitify these patterns. Overfitting 
+can also cause noise in the models performance. This model was selected as it fits our need the best. We have two possible outcomes and need
+the highest probabilty to make an educated decision. Our current models accuracies are around 53% which is too close to flipping a coin. I 
+beleive with a little more preproccesing and data engineering we can improve that score.
+
+
+Currently we are using the cumulative average for indivual players stats based on maps as well as from the beggining of their careers to the
+present. We then average the indivdal player scores together to create team based averages. This was done as these features could have a 
+higher impact to the model than just the individual matche stats. 
+
+As of now our model is no better at producing a probibility of a given winner than a toss of a coin. Within this next week i hope to be able
+to improve this through more pre processing such as using an exponential cumulative avg and also using the existing statitstics I have to 
+create a stronger feature(ie a pct_change feature based on a few existing ones). 
