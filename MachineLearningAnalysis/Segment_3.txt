@@ -1,0 +1,28 @@
+	Starting out I filtered through the data looking for incomplete or null game results and player results. For example 
+each team has 5 players, but some of thehistorical data would only have 4 players listed. I removed all matches 
+where either team had a number not equal to 5 of total players. The original idea was to build features from the individual matches
+based on the players performances such as Kills Per Round, Deaths Per Round, Survival Per Round, etc. I created these features from
+the raw data that we acquired. Then from these I attempted to create an individual team rating. Then the idea was to use that individual
+team rating to generate a running skill rating for each team or elo score. This elo score would increase or decrease based on a win or lose, 
+as well as the elo score of the opponent. Looking at the number of teams in the dataset and the number of games played by those teams, I narrowed
+our data down to the 50 most active CSGO teams or teams with the most maps played. In the end I stopped trying to build the 
+elo rating and creating specific team stat features due too time constraints and went with a more basic way of predicting a winner for a 
+future matchup.
+
+	Data was split 80% for tarining and 20% for testing. I tried three seperate models with almost similar results depending on the feature selection
+at that time. The three were a linear logistic regression model, a support vector regression model, and a random forest classifier. These three were choosen
+because the end goal of the application is to pick a winner of a match which is a binary classification, win or lose. The linear logistec regression model
+is very easy to implement and was used as my first model in both scenarios that i attempted. Feature engineering is very important for this model because it is
+sensitive to features that have very little correlation to the target or features that are very closely related to the target. On the downside to this
+model, the data needs to be properly presented to the model, it only can predict categorical outcomes, and it is prone to overfitting. The next model I used 
+was the svr model which the major downside for this model is that it does not provide probability estimates for the classifications directly. 
+
+	In segment 2 the way I approached the models was different. The goal of predicting whetehr team 1 or team 2 would win a match was still true. The features i was giving
+the model were however different. As I said earliar I wanted to build an elo rating for each team that would change with every match played and then build match specific features that truly showed
+or could better guage the winner of that match. However i was unable to do so and went with a more simplified model based on the teams themseleves and the probabilities of one
+team player another with seems to have a better accuracy score than my first few attempts. The model choices stayed the same for this transition. 
+
+	I trained the model with historical match data based on the top tier teams in the CSGO league. Then as games are played and map winners are determined, the model is fed those matches.
+Then predictions are made based on either upcoming matches of a select group of teams, the top tier CSGO teams, and passed through the model to find who the model has selected.
+My accuracy scores for my first few attempts started at 50.5% and went to 54% which is still just a flip of a coin. However when I strictly used team names through the linear logistic regression model
+the accuracy rose to 58.5% which still isnt great, but shows promise that it can be improved upon through more data and constructing other features that have relevance to the target.
