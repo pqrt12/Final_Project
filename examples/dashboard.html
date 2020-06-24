@@ -173,64 +173,63 @@
             </div>
           </div>
         </div>
-<!------------------------------------------------------------------ Team 2 Performance Table ------------------------------------------------------------>
-<div class="content">
-  <div class="row">
-    <div class="col-12">
-      <div class="card card-chart">
-        <div class="card-header ">
-          <div class="row">
-            <div class="col-sm-6 text-left">
-              <h5 class="card-category">Results</h5>
-              <br>
-              <div>
-                <!-- Dropdown reference black-dashboard.css search "btn2" for styling -->
-                <select class="btn2 btn-secondary dropdown-toggle" id="selectOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <!-- Dropdown reference black-dashboard.css search "dropdown-item2" for styling -->
-                    <option class="dropdown-item2" href="#">Team 1</option>
-                    <option class="dropdown-item2" href="#">Team 2</option>
-                    <option class="dropdown-item2" href="#">Team 3</option>
+        <!------------------------------------------------------------------ Team 2 Performance Table ------------------------------------------------------------>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Results</h5>
+                    <br>
+                    <div>
+                      <!-- Dropdown reference black-dashboard.css search "btn2" for styling -->
+                      <select class="btn2 btn-secondary dropdown-toggle" id="selectOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <!-- Dropdown reference black-dashboard.css search "dropdown-item2" for styling -->
+                          <option class="dropdown-item2" href="#">Team 1</option>
+                          <option class="dropdown-item2" href="#">Team 2</option>
+                          <option class="dropdown-item2" href="#">Team 3</option>
+                        </div>
+                      </select>
+                    </div>
                   </div>
-                </select>
+                  <div class="col-sm-6">
+                    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                      <label class="btn btn-sm btn-primary btn-simple active" id="0">
+                        <input type="radio" name="options" checked>
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Kills</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-single-02"></i>
+                        </span>
+                      </label>
+                      <label class="btn btn-sm btn-primary btn-simple" id="1">
+                        <input type="radio" class="d-none d-sm-none" name="options">
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Deaths</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-gift-2"></i>
+                        </span>
+                      </label>
+                      <label class="btn btn-sm btn-primary btn-simple" id="2">
+                        <input type="radio" class="d-none" name="options">
+                        <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Assists</span>
+                        <span class="d-block d-sm-none">
+                          <i class="tim-icons icon-tap-02"></i>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
-                <label class="btn btn-sm btn-primary btn-simple active" id="0">
-                  <input type="radio" name="options" checked>
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Kills</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-single-02"></i>
-                  </span>
-                </label>
-                <label class="btn btn-sm btn-primary btn-simple" id="1">
-                  <input type="radio" class="d-none d-sm-none" name="options">
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Deaths</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-gift-2"></i>
-                  </span>
-                </label>
-                <label class="btn btn-sm btn-primary btn-simple" id="2">
-                  <input type="radio" class="d-none" name="options">
-                  <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Assists</span>
-                  <span class="d-block d-sm-none">
-                    <i class="tim-icons icon-tap-02"></i>
-                  </span>
-                </label>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="chartBig2"></canvas>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-body">
-          <div class="chart-area">
-            <canvas id="chartBig2"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!---------------------------------------------------------------- Total Shipments SubChart ---------------------------------------------------------------->        
+        <!---------------------------------------------------------------- Total Shipments SubChart ------------------------------------------------------------->        
         <div class="row">
           <div class="col-lg-4">
             <div class="card card-chart">
@@ -245,7 +244,7 @@
               </div>
             </div>
           </div>
-<!---------------------------------------------------------------- Daily Sales SubChart -------------------------------------------------------------------->          
+          <!---------------------------------------------------------------- Daily Sales SubChart ---------------------------------------------------------->          
           <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
@@ -259,7 +258,7 @@
               </div>
             </div>
           </div>
-<!--------------------------------------------------------------- Completed Tasks SubChart ----------------------------------------------------------------->          
+          <!------------------------------------------------------ Completed Tasks SubChart ----------------------------------------------------------------->          
           <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
@@ -274,165 +273,12 @@
             </div>
           </div>
         </div>
-<!--------------------------------------------------------------- Task Table Header Menu ------------------------------------------------------------------>        
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <div class="card card-tasks">
-              <div class="card-header ">
-                <h6 class="title d-inline">Tasks(5)</h6>
-                <p class="card-category d-inline">today</p>
-                <div class="dropdown">
-                  <button type="button" class="btn btn-link dropdown-toggle btn-icon" data-toggle="dropdown">
-                    <i class="tim-icons icon-settings-gear-63"></i>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#pablo">Action</a>
-                    <a class="dropdown-item" href="#pablo">Another action</a>
-                    <a class="dropdown-item" href="#pablo">Something else</a>
-                  </div>
-                </div>
-              </div>
-<!------------------------------------------------------------------- Task Table -------------------------------------------------------------------------->              
-              <div class="card-body ">
-                <div class="table-full-width table-responsive">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">Notes in Class</p>
-                          <p class="text-muted">Most used weapons, Utilites, show how they used their utilites. Higher damage was done here by another team etc. (Show it visually)</p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="" checked="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">GDPR Compliance</p>
-                          <p class="text-muted">The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.</p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">Solve the issues</p>
-                          <p class="text-muted">Fifty percent of all respondents said they would be more likely to shop at a company </p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">Release v2.0.0</p>
-                          <p class="text-muted">Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM</p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">Export the processed files</p>
-                          <p class="text-muted">The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs. </p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value="">
-                              <span class="form-check-sign">
-                                <span class="check"></span>
-                              </span>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="title">Arival at export process</p>
-                          <p class="text-muted">Capitol Hill, Seattle, WA 12:34 AM</p>
-                        </td>
-                        <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="" class="btn btn-link" data-original-title="Edit Task">
-                            <i class="tim-icons icon-pencil"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!--------------------------------------------------------------- Simple Table -------------------------------------------------------------------->        
+        <div class="row">         
           <div class="col-lg-6 col-md-12">
             <div class="card ">
               <div class="card-header">
-<!--------------------------------------------------------------------- Simple Table ----------------------------------------------------------------------->                
+              <!--------------------------------------------------------------------- Simple Table ----------------------------------------------------------------------->                
                 <h4 class="card-title"> Simple Table</h4>
               </div>
               <!-- Card Body -->
@@ -565,7 +411,8 @@
           </div>
         </div>
       </div>
-<!-------------------------------------------------------------------- Site Footer ------------------------------------------------------------------------->
+  <!-------------------------------------------------------------------- Site Footer ------------------------------------------------------------------------->
+
       <footer class="footer">
         <div class="container-fluid">
           <ul class="nav">
@@ -596,7 +443,7 @@
       </footer>
     </div>
   </div>
-<!------------------------------------------------------------------- Settings Toggel -------------------------------------------------------------------->
+  <!------------------------------------------------------------------- Settings Toggel -------------------------------------------------------------------->
   <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
