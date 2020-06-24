@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/apple-icon.png">
   <title>
-    Black Dashboard by Creative Tim
+    Table List
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
@@ -44,10 +44,10 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
-            CT
+            <img src="../assets/img/counter_strike_logo.png">
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
-            Creative Tim
+            CS:GO - Web App
           </a>
         </div>
         <ul class="nav">
@@ -55,30 +55,6 @@
             <a href="./dashboard.html">
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Dashboard</p>
-            </a>
-          </li>
-          <li>
-            <a href="./icons.html">
-              <i class="tim-icons icon-atom"></i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li>
-            <a href="./map.html">
-              <i class="tim-icons icon-pin"></i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li>
-            <a href="./notifications.html">
-              <i class="tim-icons icon-bell-55"></i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li>
-            <a href="./user.html">
-              <i class="tim-icons icon-single-02"></i>
-              <p>User Profile</p>
             </a>
           </li>
           <li class="active ">
@@ -90,13 +66,19 @@
           <li>
             <a href="./typography.html">
               <i class="tim-icons icon-align-center"></i>
-              <p>Typography</p>
+              <p>Summary</p>
             </a>
           </li>
           <li>
-            <a href="./rtl.html">
-              <i class="tim-icons icon-world"></i>
-              <p>RTL Support</p>
+            <a href="./map.html">
+              <i class="tim-icons icon-pin"></i>
+              <p>Maps</p>
+            </a>
+          </li>
+          <li>
+            <a href="./icons.html">
+              <i class="tim-icons icon-atom"></i>
+              <p>Icons</p>
             </a>
           </li>
           <li class="active-pro">
@@ -109,74 +91,40 @@
       </div>
     </div>
     <div class="main-panel">
-      <!-- Navbar -->
+<!----------------------------------------------------------------- Top Navigation Bar ------------------------------------------------------------------->
       <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <div class="navbar-toggle d-inline">
-              <button type="button" class="navbar-toggler">
-                <span class="navbar-toggler-bar bar1"></span>
-                <span class="navbar-toggler-bar bar2"></span>
-                <span class="navbar-toggler-bar bar3"></span>
-              </button>
-            </div>
-            <a class="navbar-brand" href="javascript:void(0)">Table List</a>
+          <div class="navbar-wrapper">  
+            <!-- Dashboard heading block (title top left corner) -->
+            <a class="navbar-brand" href="javascript:void(0)">Table</a>
           </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-          </button>
+          <!-- Dashborad block -->
           <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav ml-auto">
+              <!-- Search Bar -->
               <li class="search-bar input-group">
                 <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
-                  <span class="d-lg-none d-md-block">Search</span>
+                  <span class="d-lg-none d-md-block">ENTER TEAM NAME</span>
                 </button>
               </li>
-              <li class="dropdown nav-item">
-                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                  <div class="notification d-none d-lg-block d-xl-block"></div>
-                  <i class="tim-icons icon-sound-wave"></i>
-                  <p class="d-lg-none">
-                    Notifications
-                  </p>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                  <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded to your email</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li>
-                </ul>
-              </li>
+              <!-- Picture -->
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
-                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                    <img src="../assets/img/counter_strike_logo2.png" alt="Profile Photo">
                   </div>
-                  <b class="caret d-none d-lg-block d-xl-block"></b>
-                  <p class="d-lg-none">
-                    Log out
-                  </p>
                 </a>
-                <ul class="dropdown-menu dropdown-navbar">
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li>
-                  <li class="dropdown-divider"></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
-                </ul>
               </li>
-              <li class="separator d-lg-none"></li>
             </ul>
           </div>
         </div>
       </nav>
+      <!-- Search Dropdown & Fade Effect -->
       <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ENTER TEAM NAME">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <i class="tim-icons icon-simple-remove"></i>
               </button>
@@ -184,7 +132,7 @@
           </div>
         </div>
       </div>
-      <!-- End Navbar -->
+<!---------------------------------------------------------------- Table with Background Card ---------------------------------------------------------------->
       <div class="content">
         <div class="row">
           <div class="col-md-12">
@@ -197,118 +145,23 @@
                   <table class="table tablesorter " id="">
                     <thead class=" text-primary">
                       <tr>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th class="text-center">
-                          Salary
-                        </th>
+                        <th classs="text-center">Date</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Country</th>
+                        <th>Shape</th>
+                        <th>Duration</th>
+                        <th>Comments</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-center">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-center">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-center">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-center">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-center">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-center">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-center">
-                          $98,615
-                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -316,6 +169,7 @@
               </div>
             </div>
           </div>
+<!---------------------------------------------------------------- Table Background Card ------------------------------------------------------------------>
           <div class="col-md-12">
             <div class="card  card-plain">
               <div class="card-header">
@@ -448,6 +302,7 @@
           </div>
         </div>
       </div>
+<!---------------------------------------------------------------- Webpage Footnote ------------------------------------------------------------------>     
       <footer class="footer">
         <div class="container-fluid">
           <ul class="nav">
@@ -518,7 +373,11 @@
       </ul>
     </div>
   </div>
+  <!--   Enableing D3 Functions into Webpage   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <!--   Core JS Files   -->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
