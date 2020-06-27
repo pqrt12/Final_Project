@@ -10,7 +10,7 @@
 // }
 
 // import the data from data.js
-const tableData = data;
+const tableData = data2;
 
 
 // Reference the HTML table using d3
@@ -27,7 +27,7 @@ function buildTable() {
 
     // Next, loop through each object in the data
     // and append a row and cells for each value in the row    
-    data.forEach((dataRow) => {
+    data2.forEach((dataRow) => {
 
         // Append a row to the table body
         let row = tbody.append("tr");
