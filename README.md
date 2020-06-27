@@ -17,4 +17,6 @@ Presentation: https://docs.google.com/presentation/d/1OPEzzJzlDzMRvM-uqb8Qik-JQ0
 - SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 75 - 25. We will be pridicting the winning team per each match. Using a logistics regression model to determine if they won or not.
 
 ## Dashboard
-- We will be using Tableu for our dashboard.
+- We will be presenting our results in our webapp
+Web App:
+https://pqrt12.github.io/Final_Project/examples/dashboard.html
