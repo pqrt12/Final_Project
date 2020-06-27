@@ -24,6 +24,8 @@
   <title>
     CSGO Dashboard
   </title>
+  <!-- access for node js -->
+  <script data-main="scripts/main" src="scripts/require.js"></script>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -115,8 +117,29 @@
         </div>
       </nav>
       <!-- End Navbar -->
-<!------------------------------------------------------------------ Team 1 Performance Table ------------------------------------------------------------>
-<!----------------------------------------------------------------- Data is Coming from demo.js ---------------------------------------------------------->
+      <!----------------------------------------------------------Sending Java Script to HTML Test 1--------------------------------------------------------->
+      <!--https://www.youtube.com/watch?v=rjmtYkRK1nM-->
+      <script type="text/javascript">
+        const xhr = new XMLHttpRequest();
+
+
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+              console.log(xhr.responseText);
+            }
+
+            if (xhr.status == 404) {
+              console.log('File or resource not found');
+            }
+          }
+        };
+
+        xhr.open('get', 'dom.txt', true);
+        xhr.send();
+      </script>
+      <!------------------------------------------------------------------ Team 1 Performance Table ------------------------------------------------------------>
+      <!----------------------------------------------------------------- Data is Coming from demo.js ---------------------------------------------------------->
       <div class="content">
         <div class="row">
           <div class="col-12">
@@ -131,9 +154,37 @@
                       <select class="btn2 btn-secondary dropdown-toggle" id="selectOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <!-- Dropdown reference black-dashboard.css search "dropdown-item2" for styling -->
-                          <option class="dropdown-item2" href="#">Team 1</option>
-                          <option class="dropdown-item2" href="#">Team 2</option>
-                          <option class="dropdown-item2" href="#">Team 3</option>
+                          <option class="dropdown-item2" href="#">Select Team</option>
+                          <option class="dropdown-item2" href="#">G2</option>
+                          <option class="dropdown-item2" href="#">fnatic</option>
+                          <option class="dropdown-item2" href="#">FaZe</option>
+                          <option class="dropdown-item2" href="#">FURIA</option>
+                          <option class="dropdown-item2" href="#">Astralis</option>
+                          <option class="dropdown-item2" href="#">Natus Vincere</option>
+                          <option class="dropdown-item2" href="#">Liquid</option>
+                          <option class="dropdown-item2" href="#">BIG</option>
+                          <option class="dropdown-item2" href="#">mousesports</option>
+                          <option class="dropdown-item2" href="#">Vitality</option>
+                          <option class="dropdown-item2" href="#">NiP</option>
+                          <option class="dropdown-item2" href="#">Evil Geniuses</option>
+                          <option class="dropdown-item2" href="#">MAD Lions</option>
+                          <option class="dropdown-item2" href="#">ENCE</option>
+                          <option class="dropdown-item2" href="#">100 Thieves</option>
+                          <option class="dropdown-item2" href="#">Gen.G</option>
+                          <option class="dropdown-item2" href="#">Spirit</option>
+                          <option class="dropdown-item2" href="#">MIBR</option>
+                          <option class="dropdown-item2" href="#">Cloud9</option>
+                          <option class="dropdown-item2" href="#">Complexity</option>
+                          <option class="dropdown-item2" href="#">OG</option>
+                          <option class="dropdown-item2" href="#">Heretics</option>
+                          <option class="dropdown-item2" href="#">forZe</option>
+                          <option class="dropdown-item2" href="#">Heroic</option>
+                          <option class="dropdown-item2" href="#">North</option>
+                          <option class="dropdown-item2" href="#">GODSENT</option>
+                          <option class="dropdown-item2" href="#">Virtus.pro</option>
+                          <option class="dropdown-item2" href="#">Winstrike</option>
+                          <option class="dropdown-item2" href="#">Hard Legion</option>
+                          <option class="dropdown-item2" href="#">Nemiga</option>
                         </div>
                       </select>
                     </div>
@@ -187,9 +238,37 @@
                       <select class="btn2 btn-secondary dropdown-toggle" id="selectOption" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <!-- Dropdown reference black-dashboard.css search "dropdown-item2" for styling -->
-                          <option class="dropdown-item2" href="#">Team 1</option>
-                          <option class="dropdown-item2" href="#">Team 2</option>
-                          <option class="dropdown-item2" href="#">Team 3</option>
+                          <option class="dropdown-item2" href="#">Select Team</option>
+                          <option class="dropdown-item2" href="#">G2</option>
+                          <option class="dropdown-item2" href="#">fnatic</option>
+                          <option class="dropdown-item2" href="#">FaZe</option>
+                          <option class="dropdown-item2" href="#">FURIA</option>
+                          <option class="dropdown-item2" href="#">Astralis</option>
+                          <option class="dropdown-item2" href="#">Natus Vincere</option>
+                          <option class="dropdown-item2" href="#">Liquid</option>
+                          <option class="dropdown-item2" href="#">BIG</option>
+                          <option class="dropdown-item2" href="#">mousesports</option>
+                          <option class="dropdown-item2" href="#">Vitality</option>
+                          <option class="dropdown-item2" href="#">NiP</option>
+                          <option class="dropdown-item2" href="#">Evil Geniuses</option>
+                          <option class="dropdown-item2" href="#">MAD Lions</option>
+                          <option class="dropdown-item2" href="#">ENCE</option>
+                          <option class="dropdown-item2" href="#">100 Thieves</option>
+                          <option class="dropdown-item2" href="#">Gen.G</option>
+                          <option class="dropdown-item2" href="#">Spirit</option>
+                          <option class="dropdown-item2" href="#">MIBR</option>
+                          <option class="dropdown-item2" href="#">Cloud9</option>
+                          <option class="dropdown-item2" href="#">Complexity</option>
+                          <option class="dropdown-item2" href="#">OG</option>
+                          <option class="dropdown-item2" href="#">Heretics</option>
+                          <option class="dropdown-item2" href="#">forZe</option>
+                          <option class="dropdown-item2" href="#">Heroic</option>
+                          <option class="dropdown-item2" href="#">North</option>
+                          <option class="dropdown-item2" href="#">GODSENT</option>
+                          <option class="dropdown-item2" href="#">Virtus.pro</option>
+                          <option class="dropdown-item2" href="#">Winstrike</option>
+                          <option class="dropdown-item2" href="#">Hard Legion</option>
+                          <option class="dropdown-item2" href="#">Nemiga</option>
                         </div>
                       </select>
                     </div>
@@ -234,8 +313,8 @@
           <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-category">Total Shipments</h5>
-                <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
+                <h5 class="card-category">Team 1 overall Ranking</h5>
+                <h3 class="card-title"></h3>
               </div>
               <div class="card-body">
                 <div class="chart-area">
@@ -245,7 +324,7 @@
             </div>
           </div>
           <!---------------------------------------------------------------- Daily Sales SubChart ---------------------------------------------------------->          
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
                 <h5 class="card-category">Daily Sales</h5>
@@ -257,13 +336,13 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!------------------------------------------------------ Completed Tasks SubChart ----------------------------------------------------------------->          
           <div class="col-lg-4">
             <div class="card card-chart">
               <div class="card-header">
-                <h5 class="card-category">Completed Tasks</h5>
-                <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
+                <h5 class="card-category">Team 2 overall Ranking</h5>
+                <h3 class="card-title"></h3>
               </div>
               <div class="card-body">
                 <div class="chart-area">
@@ -275,11 +354,11 @@
         </div>
         <!--------------------------------------------------------------- Simple Table -------------------------------------------------------------------->        
         <div class="row">         
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-4 col-md-12">
             <div class="card ">
               <div class="card-header">
               <!--------------------------------------------------------------------- Simple Table ----------------------------------------------------------------------->                
-                <h4 class="card-title"> Simple Table</h4>
+                <h4 class="card-title"> Game Maps Table</h4>
               </div>
               <!-- Card Body -->
               <div class="card-body">
@@ -289,119 +368,19 @@
                     <thead class=" text-primary">
                       <tr>
                         <th>
-                          Name
-                        </th>
-                        <th>
-                          Country
-                        </th>
-                        <th>
-                          City
-                        </th>
-                        <th class="text-center">
-                          Salary
+                          Map Name
                         </th>
                       </tr>
                     </thead>
                     <!-- Table Body -->
                     <tbody>
-                      <!-- Table Data -->
                       <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-center">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-center">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-center">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-center">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-center">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-center">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-center">
-                          $98,615
-                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
@@ -491,8 +470,11 @@
       </ul>
     </div>
   </div>
-
+  <!--   Enableing D3 Functions into Webpage   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <!-----------------------------------------------------------------   Core JS Files   -------------------------------------------------------------------->
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
