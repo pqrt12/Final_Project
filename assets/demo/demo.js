@@ -185,7 +185,7 @@ demo = {
           },
           ticks: {
             suggestedMin: 60,
-            suggestedMax: 125,
+            suggestedMax: 100,
             padding: 20,
             fontColor: "#9a9a9a"
           }
@@ -376,7 +376,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [20, 30, 35, 20, 2, 1],
       }]
     };
 
@@ -425,8 +425,8 @@ demo = {
 
 
 
-    var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+    var chart_labels = ['GAME 1', 'GAME 2', 'GAME 3', 'GAME 4', 'GAME 5'];
+    var chart_data = [40, 20, 50, 10, 15];
 
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
@@ -468,7 +468,7 @@ demo = {
       myChartData.update();
     });
     $("#1").click(function() {
-      var chart_data = [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120];
+      var chart_data = [10, 5, 3, 28, 10];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
@@ -476,7 +476,7 @@ demo = {
     });
 
     $("#2").click(function() {
-      var chart_data = [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
+      var chart_data = [60, 80, 65, 50, 80];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
