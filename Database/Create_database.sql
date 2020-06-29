@@ -1,4 +1,4 @@
-﻿CREATE TABLE "Players" (
+﻿CREATE TABLE "players" (
     "player_id" int   NOT NULL,
     "player_name" varchar   NOT NULL,
     CONSTRAINT "pk_Players" PRIMARY KEY (
@@ -6,21 +6,24 @@
      )
 );
 
-CREATE TABLE "Maps" (
+CREATE TABLE "maps" (
     "map" varchar   NOT NULL,
     CONSTRAINT "pk_Maps" PRIMARY KEY (
         "map"
      )
 );
 
-CREATE TABLE "Teams" (
+CREATE TABLE "teams" (
     "team" varchar   NOT NULL,
     "player_id" int   NOT NULL,
     "from_date" date   NOT NULL,
-    "to_date" date   NOT NULL
+    "to_date" date   NOT NULL,
+	CONSTRAINT "pk_Teams" PRIMARY KEY (
+        "team", "from_date"
+     )
 );
 
-CREATE TABLE "Events" (
+CREATE TABLE "events" (
     "event_id" int   NOT NULL,
     "event_name" varchar   NOT NULL,
     CONSTRAINT "pk_Events" PRIMARY KEY (
@@ -28,7 +31,7 @@ CREATE TABLE "Events" (
      )
 );
 
-CREATE TABLE "Matches" (
+CREATE TABLE "matches" (
     "match_id" int  NOT NULL,
     "event_id" int   NOT NULL,
     "team_1" varchar   NOT NULL,
@@ -45,7 +48,7 @@ CREATE TABLE "Matches" (
      )
 );
 
-CREATE TABLE "Player_results" (
+CREATE TABLE "player_results" (
     "match_id" int  NOT NULL,
     "player_id" int   NOT NULL,
     "map" varchar   NOT NULL,
@@ -58,7 +61,10 @@ CREATE TABLE "Player_results" (
     "kddiff" int   NOT NULL,
     "adr" float   NOT NULL,
     "fkdiff" int   NOT NULL,
-    "rating" float   NOT NULL
+    "rating" float   NOT NULL,
+    CONSTRAINT "pk_presults" PRIMARY KEY (
+        "match_id", "player_id", "map" 
+     )
 );
 
 CREATE TABLE "Team_results" (
@@ -73,40 +79,43 @@ CREATE TABLE "Team_results" (
     "rounds_won_ct" int   NOT NULL,
     "rounds_won_t" int   NOT NULL,
     "map_winner" varchar   NOT NULL,
-    "match_winner" varchar   NOT NULL
+    "match_winner" varchar   NOT NULL,
+    CONSTRAINT "pk_tresults" PRIMARY KEY (
+        "match_id", "team", "map" 
+     )
 );
 
-ALTER TABLE "Teams" 
-ADD CONSTRAINT "fk_Teams_player_id" 
-FOREIGN KEY("player_id")
-REFERENCES "Players" ("player_id");
-
-ALTER TABLE "Matches" 
-ADD CONSTRAINT "fk_Matches_event_id" 
+ALTER TABLE "matches" 
+ADD CONSTRAINT "fk_matches_event_id" 
 FOREIGN KEY("event_id")
-REFERENCES "Events" ("event_id");
+REFERENCES "events" ("event_id");
 
-ALTER TABLE "Player_results" 
-ADD CONSTRAINT "fk_Player_results_match_id" 
-FOREIGN KEY("match_id")
-REFERENCES "Matches" ("match_id");
-
-ALTER TABLE "Player_results" 
-ADD CONSTRAINT "fk_Player_results_player_id" 
+ALTER TABLE "teams" 
+ADD CONSTRAINT "fk_teams_player_id" 
 FOREIGN KEY("player_id")
 REFERENCES "Players" ("player_id");
 
-ALTER TABLE "Player_results" 
-ADD CONSTRAINT "fk_Player_results_map" 
-FOREIGN KEY("map")
-REFERENCES "Maps" ("map");
-
-ALTER TABLE "Team_results" 
-ADD CONSTRAINT "fk_Team_results_match_id" 
+ALTER TABLE "player_results" 
+ADD CONSTRAINT "fk_player_results_match_id" 
 FOREIGN KEY("match_id")
-REFERENCES "Matches" ("match_id");
+REFERENCES "matches" ("match_id");
 
-ALTER TABLE "Team_results" 
-ADD CONSTRAINT "fk_Team_results_map" 
+ALTER TABLE "player_results" 
+ADD CONSTRAINT "fk_player_results_player_id" 
+FOREIGN KEY("player_id")
+REFERENCES "players" ("player_id");
+
+ALTER TABLE "player_results" 
+ADD CONSTRAINT "fk_player_results_map" 
 FOREIGN KEY("map")
-REFERENCES "Maps" ("map");
+REFERENCES "maps" ("map");
+
+ALTER TABLE "team_results" 
+ADD CONSTRAINT "fk_team_results_match_id" 
+FOREIGN KEY("match_id")
+REFERENCES "matches" ("match_id");
+
+ALTER TABLE "team_results" 
+ADD CONSTRAINT "fk_team_results_map" 
+FOREIGN KEY("map")
+REFERENCES "maps" ("map");

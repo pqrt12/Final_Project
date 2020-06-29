@@ -27,6 +27,7 @@ map_3 varchar
 map_4 varchar
 map_5 varchar
 date date
+total_rounds int
 
 Player_results
 -
@@ -52,7 +53,6 @@ map varchar fk - Maps
 rank int
 equipment_avg int
 starting_ct varchar
-rounds_total int
 rounds_won int
 rounds_won_ct int
 rounds_won_t  int
