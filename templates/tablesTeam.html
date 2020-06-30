@@ -19,8 +19,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../static/img/apple-icon.png">
   <title>
     Table List
   </title>
@@ -28,14 +28,14 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="../static/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="../static/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="" onload="bodyload()">
   <div class="wrapper">
     <div class="sidebar">
       <!--
@@ -44,7 +44,7 @@
       <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
-            <img src="../assets/img/counter_strike_logo.png">
+            <img src="../static/img/counter_strike_logo.png">
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
             CS:GO - Web App
@@ -57,12 +57,18 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="active ">
-            <a href="./tables.html">
+          <li>
+            <a href="./tablesResults.html">
               <i class="tim-icons icon-puzzle-10"></i>
-              <p>Table List</p>
+              <p>Table ML Results (MOCK DATA)</p>
             </a>
           </li>
+          <li class="active ">
+            <a href="./tablesTeam.html">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Table Team Results</p>
+            </a>
+          </li>          
           <li>
             <a href="./typography.html">
               <i class="tim-icons icon-align-center"></i>
@@ -111,7 +117,7 @@
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
-                    <img src="../assets/img/counter_strike_logo2.png" alt="Profile Photo">
+                    <img src="../static/img/counter_strike_logo2.png" alt="Profile Photo">
                   </div>
                 </a>
               </li>
@@ -132,7 +138,7 @@
           </div>
         </div>
       </div>
-<!---------------------------------------------------------------- Table with Background Card ---------------------------------------------------------------->
+      <!---------------------------------------------------------------- Table with Background Card ---------------------------------------------------------------->
       <div class="content">
         <div class="row">
           <div class="col-md-12">
@@ -145,21 +151,22 @@
                   <table class="table tablesorter " id="">
                     <thead class=" text-primary">
                       <tr>
-                        <th>Team 1: Name</th>
-                        <th>Team 1: Probability</th>
-                        <th>Team 2: Name</th>
-                        <th>Team 2: Probability</th>
-                        <th>Map Winner</th>
+                        <th>Map</th>
+                        <th>Map Winner/Losser</th>
+                        <th>Map Wins</th>
+                        <th>Match Winner</th>
+                        <th>Rank</th>
+                        <th>Rounds Won</th>
+                        <th>Rounds Won as CT</th>
+                        <th>Rounds Won as T</th>
+                        <th>Starting CT</th>
+                        <th>Team</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="text-center"></td>
+                        <td>
+                        </td>                                              
                       </tr>
                     </tbody>
                   </table>
@@ -167,10 +174,9 @@
               </div>
             </div>
           </div>
-<!---------------------------------------------------------------- Table Background Card ------------------------------------------------------------------>
         </div>
       </div>
-<!---------------------------------------------------------------- Webpage Footnote ------------------------------------------------------------------>     
+      <!---------------------------------------------------------------- Webpage Footnote ------------------------------------------------------------------>     
       <footer class="footer">
         <div class="container-fluid">
           <ul class="nav">
@@ -242,24 +248,24 @@
     </div>
   </div>
   <!--   Enableing D3 Functions into Webpage   -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
   <!--   Core JS Files   -->
-  <script src="../assets/js/data2.js"></script>
-  <script src="../assets/js/app2.js"></script>
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- <script src="../static/js/data.js"></script> -->
+  <script src="../static/js/app_teamresults_table.js"></script>
+  <script src="../static/js/core/jquery.min.js"></script>
+  <script src="../static/js/core/popper.min.js"></script>
+  <script src="../static/js/core/bootstrap.min.js"></script>
+  <script src="../static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
   <!-- Place this tag in your head or just before your close body tag. -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="../static/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="../static/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="../static/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../static/demo/demo.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
